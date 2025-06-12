@@ -4,12 +4,15 @@ import step2 from "assets/demos/step2.webm";
 import step3 from "assets/demos/step3.webm";
 import step4 from "assets/demos/step4.webm";
 import board from "assets/demos/board.webm";
+
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <section class="px-4 py-12 bg-white">
   <h2 class="text-3xl font-semibold text-center mb-10">See It in Action</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
-    <div class="rounded-xl overflow-hidden shadow-lg">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto items-stretch">
+    <div class="rounded-xl overflow-hidden shadow-lg h-full">
       <video
         src={step1}
         autoplay
@@ -22,7 +25,7 @@ import board from "assets/demos/board.webm";
         <h3 class="text-lg font-medium text-gray-800 text-center">Pre-select tickets for estimation</h3>
       </div>
     </div>
-    <div class="rounded-xl overflow-hidden shadow-lg">
+    <div class="rounded-xl overflow-hidden shadow-lg h-full">
       <video
         src={step2}
         autoplay
@@ -35,7 +38,7 @@ import board from "assets/demos/board.webm";
         <h3 class="text-lg font-medium text-gray-800 text-center">Create a room with the label selected</h3>
       </div>
     </div>
-    <div class="rounded-xl overflow-hidden shadow-lg col-span-2">
+    <div class="rounded-xl overflow-hidden shadow-lg sm:col-span-2 h-full">
       <video
         src={board}
         autoplay
@@ -45,31 +48,42 @@ import board from "assets/demos/board.webm";
         class="w-full h-auto"
       ></video>
     </div>
-    <div class="rounded-xl overflow-hidden shadow-lg">
+    <div class="rounded-xl overflow-hidden shadow-lg h-full">
       <video
         src={step3}
         autoplay
         muted
         loop
         playsinline
-        class="w-full h-auto"
+        class="w-full h-auto aspect-video object-cover"
       ></video>
       <div class="p-4">
         <h3 class="text-lg font-medium text-gray-800 text-center">Reach team consensus</h3>
       </div>
     </div>
-    <div class="rounded-xl overflow-hidden shadow-lg">
+    <div class="rounded-xl overflow-hidden shadow-lg h-full">
       <video
         src={step4}
         autoplay
         muted
         loop
         playsinline
-        class="w-full h-auto"
+        class="w-full h-auto aspect-video object-cover"
       ></video>
       <div class="p-4">
-        <h3 class="text-lg font-medium text-gray-800 text-center">The number is saved back to Jira</h3>
+        <h3 class="text-lg font-medium text-gray-800 text-center">The estimate is saved back to Jira</h3>
       </div>
     </div>
   </div>
+  <div class="py-8 w-full flex justify-center">
+    <Link
+      href="#"
+      href="https://scrumspoker.com/admin"
+      target="_blank"
+      class="flex gap-1 items-center justify-center"
+      rel="noopener">
+      <Icon class="text-white w-5 h-5" name="bx:bxs-magic-wand" />
+      Start for Free
+    </Link>
+</div>
 </section>
