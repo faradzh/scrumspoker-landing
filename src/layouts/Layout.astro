@@ -8,7 +8,7 @@ import '@fontsource-variable/bricolage-grotesque';
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
+  "/_astro/illustration3.PPq87QfV_Z17Iav2.png",
   Astro.site
 ).toString();
 
@@ -26,22 +26,17 @@ const makeTitle = 'Scrumspoker - Collaborative Estimation for Agile Teams';
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="Have fun estimating SCRUM stories with your team."
       canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
-        card: "summary_large_image",
-      }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: `Scrumspoker - Collaborative Estimation for Agile Teams`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Team members collaborating on Scrum estimation",
         },
       }}
     />
