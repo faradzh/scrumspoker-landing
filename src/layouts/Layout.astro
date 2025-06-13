@@ -5,11 +5,11 @@ import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
 import '@fontsource-variable/bricolage-grotesque';
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const canonicalURL = new URL(Astro.url.pathname, 'https://scrumspoker.com').toString();
 
 const resolvedImageWithDomain = new URL(
   "/_astro/illustration3.PPq87QfV_Z17Iav2.png",
-  Astro.site
+  'https://scrumspoker.com',
 ).toString();
 
 const makeTitle = 'Scrumspoker - Collaborative Estimation for Agile Teams';
